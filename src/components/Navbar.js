@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Favorites from "./Favorites";
 import SearchBar from "./SearchBar";
 
-const Navbar = ({}) => {
+const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="col-4 d-flex flex-row sw-font">
