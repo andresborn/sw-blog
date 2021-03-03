@@ -10,7 +10,7 @@ const PlanetCard = ({ planet }) => {
     <div className="col-xs-6 py-1">
       <div className="card" style={{ width: "12rem", height: "32rem" }}>
 
-        <img style={{height: "10rem", objectFit: "cover", objectPosition: "top"}} src={`${actions.getPlanetImage(planet)}`} className="card-img-top" alt="A picture of the planet of the Wookies" />
+        <img style={{height: "10rem", objectFit: "cover", objectPosition: "top"}} src={`${actions.getPlanetImage(planet)}`} className="card-img-top" alt={planet.name} />
 
         <div className="card-body d-flex flex-column justify-content-around">
           <h4 className="card-title">{planet.name}</h4>

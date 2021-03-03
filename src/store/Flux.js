@@ -1,7 +1,7 @@
 const getState = ({ getStore, setStore, getActions }) => {
     return {
         store: {
-            favorites: [],
+            favorites: JSON.parse(localStorage.getItem('favorites')) || [],
             planetImages: [
                 {
                     name: "Tatooine",
@@ -126,37 +126,6 @@ const getState = ({ getStore, setStore, getActions }) => {
                     setStore({ planets, people });
                 };
                 getData();
-            },
-            postData: (url, info) => {
-                const postDataToApi = async (url, info) => {
-                    const res = await fetch(url, {
-                        method: "POST",
-                        headers: { "Content-type": "application/json" },
-                        body: JSON.stringify(info),
-                    });
-                    const data = await res.json()
-                    return data
-                };
-                return postDataToApi(url, info)
-            },
-            fetchAndSetFavorites: async () => {
-                const fetchFavorites = async () => {
-                    const token = sessionStorage.getItem("token")
-                    const username = sessionStorage.getItem("username")
-                    const res = await fetch(`https://3000-pink-skunk-wepde99x.ws-us03.gitpod.io/favorite/${username}`, {
-                        method: "GET",
-                        headers: {
-                            "Content-type": "application/json",
-                            Authorization: "Bearer " + token
-                        }
-                    })
-                    const data = await res.json()
-                    return data
-                }
-                const setFavorites = async () => {
-                    const favorites = await fetchFavorites()
-                    setStore({ favorites: [...favorites]})
-                }
             },
             addFavorite: (input) => {
                 const favorites = getStore().favorites;

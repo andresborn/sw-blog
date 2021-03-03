@@ -13,7 +13,7 @@ const { store, actions } = useContext(Context)
   return (
     <div className="col-xs-6 py-1 px-0">
       <div className="card" style={{ width: "12rem", height: "24rem"}}>
-        <img style={{height: "10rem", objectFit: "cover", objectPosition: "top"}} src={`${actions.getPersonImage(person)}`} className="card-img-top" alt="A picture of Yoda" />
+        <img style={{height: "10rem", objectFit: "cover", objectPosition: "top"}} src={`${actions.getPersonImage(person)}`} className="card-img-top" alt={person.name} />
         <div className="card-body d-flex flex-column justify-content-around">
           <h5 className="card-title">{person.name}</h5>
           <p className="card-text">Born: {person.birth_year}</p>

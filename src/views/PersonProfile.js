@@ -20,7 +20,7 @@ const PersonProfile = ({ match }) => {
         }
       <div className="row d-flex flex-column">
       <div className="col-12">
-      <img className="pb-5" style={{maxWidth:"100%", objectFit: "cover", objectPosition: "top"}} src={`${actions.getPersonImage(person)}`} alt=""/>
+      <img className="pb-5" style={{maxWidth:"100%", objectFit: "cover", objectPosition: "top"}} src={`${actions.getPersonImage(person)}`} alt={person.name}/>
       </div>
       <div className="col-12">
         

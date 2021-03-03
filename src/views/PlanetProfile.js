@@ -13,7 +13,7 @@ const PlanetProfile = ({ match }) => {
       <h6 className="breadcrumb bg-warning">Gravity: {planet.gravity}</h6>
       <div className="d-flex flex-column">
       <div className="col-12">
-        <img className="pb-5" style={{maxWidth:"100%", objectFit: "cover", objectPosition: "top"}} src={`${actions.getPlanetImage(planet)}`} alt=""/>
+        <img className="pb-5" style={{maxWidth:"100%", objectFit: "cover", objectPosition: "top"}} src={`${actions.getPlanetImage(planet)}`} alt={planet.name}/>
       </div> 
       <div className="col-12">
           <ul className="list-group" style={{ listStyle: "none" }}>

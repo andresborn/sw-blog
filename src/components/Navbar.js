@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Favorites from "./Favorites";
 import SearchBar from "./SearchBar";
-import Button from "./Button";
 
 const Navbar = ({}) => {
   return (
@@ -29,16 +28,6 @@ const Navbar = ({}) => {
                 Home
               </span>
             </Link>
-          </li>
-          <li className="nav-item nav-link mr-auto">
-          <Link to="/sw-blog/register">
-          <Button content="Register" className="btn-secondary" />
-          </Link>
-          </li>
-          <li className="nav-item nav-link mr-auto">
-          <Link to="/sw-blog/login">
-          <Button content="Log In" className="btn-warning" />
-          </Link>
           </li>
           <li className="nav-item nav-link mr-auto">
             <Favorites />
