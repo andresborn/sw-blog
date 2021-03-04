@@ -10,6 +10,7 @@ This StarWars blog:
 - Distributes the data accross the app using the **Context API**
 - Uses **Routing** to switch views
 - Has a **filterable search bar** to access the items
+- LocalStorage
 
 There is an updated version of this blog that uses our own backend built with Flask.
 
